@@ -4,6 +4,10 @@ import createSchema from 'part:@sanity/base/schema-creator'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import tags from './documents/tags';
+import projects from './documents/projects';
+
+// Plug Types
+import mainImage from './plugs/mainImage';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -15,6 +19,10 @@ export default createSchema({
     /* Your types here! */
     // The following are document types which will appear
     // in the studio.
-    tags
+    projects,
+    tags,
+    
+    // plugs
+    mainImage,
   ]),
 });

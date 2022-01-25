@@ -30,6 +30,11 @@ export default {
       type: 'text',
     },
     {
+      title: 'Image URL',
+      name: 'imageUrl',
+      type: 'url',
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',
