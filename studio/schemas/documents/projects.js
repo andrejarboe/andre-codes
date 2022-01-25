@@ -27,7 +27,15 @@ export default {
     {
       title: 'Description',
       name: 'description',
-      type: 'text',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: [],
+        }
+      ]
     },
     {
       title: 'Project Url',
@@ -48,5 +56,10 @@ export default {
         layout: 'tags',
       },
     },
+    {
+      name: 'notes',
+      title: 'Notes for the user',
+      type: 'text',
+    }
   ],
 };
