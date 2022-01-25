@@ -32,8 +32,8 @@ export default {
         {
           title: 'Block',
           type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
+          // styles: [{title: 'Normal', value: 'normal'}],
+          // lists: [],
         }
       ]
     },
@@ -62,4 +62,11 @@ export default {
       type: 'text',
     }
   ],
+  preview: {
+    select: {
+      media: 'mainImage',
+      title: 'title',
+      tags: 'tags'
+    }
+  }
 };
