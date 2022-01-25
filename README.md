@@ -20,3 +20,7 @@ git push
 
 sanity
 project
+
+## production
+turn on cd in lib  
+set up the correct cores  
