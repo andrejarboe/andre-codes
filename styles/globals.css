@@ -1,0 +1,20 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    
+    .blinking-cursor:after{
+        content: '|';
+        /* @apply text-secondary-300; */
+        animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+}
