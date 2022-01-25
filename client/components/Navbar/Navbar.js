@@ -57,7 +57,7 @@ export default function Navbar(
           className={
             'flex flex-col md:flex-row md:flex items-center justify-end text-center  md:space-x-4 space-y-4 md:space-y-0 capitalize' +
             ' ' +
-            (show ? 'md:hidden' : 'md:flex')
+            (show ? 'block' : 'hidden')
           }
         >
           {siteMap.map((link, index, siteMap) => {
