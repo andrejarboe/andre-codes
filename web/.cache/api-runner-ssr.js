@@ -2,6 +2,10 @@ var plugins = [{
       name: 'gatsby-plugin-image',
       plugin: require('/home/andre/code/.business/clients/andre-codes/web/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      name: 'gatsby-source-sanity',
+      plugin: require('/home/andre/code/.business/clients/andre-codes/web/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      options: {"plugins":[],"projectId":"rmudpb1a","dataset":"production","graphqlTag":"default"},
     }]
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:

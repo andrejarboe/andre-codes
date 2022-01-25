@@ -30,8 +30,13 @@ export default {
       type: 'text',
     },
     {
-      title: 'Image URL',
-      name: 'imageUrl',
+      title: 'Project Url',
+      name: 'projectUrl',
+      type: 'url',
+    },
+    {
+      title: 'GitHub Url',
+      name: 'gitHubUrl',
       type: 'url',
     },
     {
