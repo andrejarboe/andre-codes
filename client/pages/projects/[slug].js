@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MainLayout from '../../components/Layouts/MainLayout';
 import {
   sanityClient,
   urlFor,
@@ -17,11 +18,12 @@ const projectsQuery = `*[_type == "projects" && slug.current == $slug][0]{
 export default function oneProject({ data, preview }) {
   return (
     <div>
-      <h1>Hi</h1>
+      <MainLayout>
+        <h1>{project.name}</h1>
+      </MainLayout>
     </div>
   );
 }
-
 
 export async function getStaticPaths() {
   const paths = await sanityClient.fetch(
