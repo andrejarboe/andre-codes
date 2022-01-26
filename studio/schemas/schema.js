@@ -8,6 +8,7 @@ import projects from './documents/projects';
 
 // Plug Types
 import mainImage from './plugs/mainImage';
+import placeHolderImage from './documents/placeHolderImage';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -21,6 +22,7 @@ export default createSchema({
     // in the studio.
     projects,
     tags,
+    placeHolderImage,
     
     // plugs
     mainImage,
