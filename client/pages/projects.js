@@ -1,6 +1,8 @@
 import React from 'react';
 import { sanityClient } from '../lib/sanity';
 import MainLayout from '../components/Layouts/MainLayout';
+import Portfolio from '../components/Portfolio/Portfolio';
+
 
 const projectsQuery = `*[ _type == 'projects']{
   _id,
@@ -12,7 +14,7 @@ const projectsQuery = `*[ _type == 'projects']{
 }`;
 
 
-export default function projects() {
+export default function projects({ projects }) {
   return (
     <div>
       <MainLayout>
