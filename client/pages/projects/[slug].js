@@ -12,19 +12,36 @@ const projectsQuery = `*[_type == "projects" && slug.current == $slug][0]{
     title,
     slug,
     mainImage,
-    tags
+    tags,
+    description
 }`;
 
 export default function oneProject({ data, preview }) {
+  if (!data) return <div>Loading...</div>;
+//   const { data: project } = usePreviewSubscription(projectsQuery, {
+//     params: { slug: data.project?.slug.current },
+//     initialData: data,
+//     enabled: preview,
+//   });
+
+const { project } = data;
+
+console.log('project: ');
+console.log(project.title);
+
   return (
     <div>
       <MainLayout>
-        <h1>{project.name}</h1>
+        <h1>{project.title}</h1>
+        <main>
+          <PortableText blocks={project?.description} className="" />
+        </main>
       </MainLayout>
     </div>
   );
 }
 
+// gets the url for every project
 export async function getStaticPaths() {
   const paths = await sanityClient.fetch(
     `*[_type == "projects" && defined(slug.current)]{
@@ -40,8 +57,16 @@ export async function getStaticPaths() {
   };
 }
 
+// gets the data and content for every project
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  const projects = await sanityClient.fetch(projectsQuery, { slug });
-  return { props: { data: { projects }, preview: true } };
+  const project = await sanityClient.fetch(projectsQuery, { slug });
+  return {
+    props: {
+      data: {
+        project,
+      },
+      preview: true,
+    },
+  };
 }
