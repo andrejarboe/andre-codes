@@ -1,7 +1,18 @@
 import Head from 'next/head';
 import MainLayout from '../components/Layouts/MainLayout';
+import Portfolio from '../components/Portfolio/Portfolio';
+import { sanityClient } from '../lib/sanity';
 
-export default function Home() {
+const projectsQuery = `*[ _type == 'projects']{
+  _id,
+  title,
+  slug,
+  mainImage,
+  tags
+}`;
+
+
+export default function Home({projects}) {
   return (
     <div>
       <Head>
@@ -10,8 +21,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
+        <div className="max-w-6xl mx-auto px-4 py-6">
+          <Portfolio projects={projects} />
+        </div>
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </MainLayout>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const projects = await sanityClient.fetch(projectsQuery);
+  return { props: { projects } };
 }

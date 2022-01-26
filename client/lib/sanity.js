@@ -9,7 +9,7 @@ import {
 const config = {
   projectId: 'rmudpb1a',
   dataset: 'production',
-  apiVersion: '2021-10-21',
+  apiVersion: '2021-03-25',
   // use cdn in production
   useCdn: false,
 };
