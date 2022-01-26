@@ -8,6 +8,7 @@ const projectsQuery = `*[ _type == 'projects']{
   title,
   slug,
   mainImage,
+  description,
   tags
 }`;
 

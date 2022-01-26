@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { urlFor } from '../../lib/sanity';
+import { PortableText } from '../../lib/sanity';
 
 export default function Portfolio({ projects }) {
   return (
@@ -35,9 +36,7 @@ export default function Portfolio({ projects }) {
                     {project.title}
                   </h3>
                   <p>
-                    Inventore molestiae aliquam hic, adipisci blanditiis
-                    provident iusto rerum. Asperiores deserunt quae qui repellat
-                    assumenda.
+                    <PortableText blocks={project?.description} className="" />
                   </p>
                 </div>
                 {/* END Card Body */}
