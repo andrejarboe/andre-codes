@@ -25,7 +25,6 @@ export default function Home({projects}) {
         <div className="max-w-6xl mx-auto px-4 py-6">
           <Portfolio projects={projects} />
         </div>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </MainLayout>
     </div>
   );
