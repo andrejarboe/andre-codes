@@ -32,6 +32,12 @@ export default function Portfolio({ projects }) {
                 {/* Card Body */}
                 <div className="p-5 lg:p-6 grow w-full">
                   {/* <p className="font-semibold mb-1 text-indigo-500">Tags</p> */}
+                  <div className="font-semibold inline-flex px-2 py-1 leading-4 text-sm rounded-full text-red-700 bg-red-200 mx-1">
+                    React
+                  </div>
+                  <div className="font-semibold inline-flex px-2 py-1 leading-4 text-sm rounded-full text-red-700 bg-red-200 mx-1">
+                    HTML
+                  </div>
                   <h3 className="font-semibold text-xl mb-2">
                     {project.title}
                   </h3>
