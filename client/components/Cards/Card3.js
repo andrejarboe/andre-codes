@@ -50,8 +50,8 @@ export default function Card3({
     //     </div>
     //   </div>
     // </a>
-    <Link href="/lead_generation.html">
-      <a className="flex flex-col md:flex-row md:h-60 my-4 rounded-sm overflow-hidden shadow-md hover:shadow-lg border-orange-200 bg-white">
+    <Link href="#">
+      <a className="flex flex-col md:flex-row md:h-60 my-4 rounded-sm overflow-hidden shadow-md hover:shadow-lg border-orange-200 bg-white w-6xl">
         <div className="h-60 md:h-auto md:w-2/5">
           {/* <img
             className="w-full h-full object-cover"
@@ -64,7 +64,7 @@ export default function Card3({
               alt="Picture of the author"
               layout="fill" // required
               objectFit="cover" // change to suit your needs
-              className="" // just an example
+              className="object-top" // just an example
             />
           </div>
         </div>
