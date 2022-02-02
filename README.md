@@ -23,4 +23,15 @@ project
 
 ## production
 turn on cd in lib  
-set up the correct cores  
+set up the correct cores   
+
+## Netlify
+npm install -D @netlify/plugin-nextjs@latest  
+
+netlify.toml:  
+
+[[plugins]]  
+package = "@netlify/plugin-nextjs"  
+
+[build]
+publish = ".next"
