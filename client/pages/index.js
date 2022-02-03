@@ -18,7 +18,6 @@ const projectsQuery = `*[ _type == 'projects']{
 }`;
 
 const data = {
- 
   posts: [
     {
       title: 'This is a title',
@@ -104,7 +103,13 @@ export default function Home({ projects }) {
           <div className="grid grid-cols-12 ">
             <div className="col-span-12 md:col-span-8">
               {projects.map((project, index) => {
-                return <Card3 key={index} imageUrl={urlFor(project.mainImage).url()} />;
+                return (
+                  <Card3
+                    key={index}
+                    imageUrl={urlFor(project.mainImage).url()}
+                    title={project.title}
+                  />
+                );
               })}
             </div>
             <div className="col-span-12 md:col-span-4">
@@ -119,7 +124,6 @@ export default function Home({ projects }) {
 }
 
 export async function getStaticProps() {
-
   const projects = await sanityClient.fetch(projectsQuery);
   return { props: { projects } };
 }
