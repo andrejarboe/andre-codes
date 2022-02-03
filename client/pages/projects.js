@@ -9,7 +9,9 @@ const projectsQuery = `*[ _type == 'projects']{
   slug,
   mainImage,
   description,
-  tags
+  tags[] -> {
+      title
+   }
 }`;
 
 export default function projects({ projects }) {
@@ -198,7 +200,6 @@ export default function projects({ projects }) {
                 </div>
               </div>
             </div>
-
             {/* END about me  */}
           </div>
         </div>
