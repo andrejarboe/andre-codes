@@ -33,15 +33,7 @@ export default function TagsList({ projects }) {
           {newTags.map((tag, index) => {
             const [text, value] = tag;
             return (
-              // <Link key={index} href={`/portfolio:${text}`}>
-              //   <a className="flex-1 block py-2 font-serif text-lg font-thin text-gray-900">
-              //     {text}
-              //     <span className="p-2 text-lg font-thin text-gray-700">
-              //     {value}
-              //     </span>
-              //   </a>
-              // </Link>
-              <li className="flex">
+              <li className="flex" key={index}>
                 <Link href={`/portfolio:${text}`}>
                   <a className="flex-1 block py-2 font-serif text-lg font-thin text-gray-900 capitalize">
                     {text}

@@ -18,33 +18,7 @@ const projectsQuery = `*[ _type == 'projects']{
 }`;
 
 const data = {
-  sections: [
-    {
-      title: 'News',
-      link: '/news',
-      image:
-        'https://images.pexels.com/photos/9469733/pexels-photo-9469733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      alt: '',
-    },
-    {
-      title: 'Vendor Program',
-      link: '/vendor-program',
-      image:
-        'https://images.pexels.com/photos/4527900/pexels-photo-4527900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    },
-    {
-      title: 'Advocacy',
-      link: '/vendor-program',
-      image:
-        'https://images.pexels.com/photos/4527900/pexels-photo-4527900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    },
-    {
-      title: 'Empowering People To Work',
-      link: '/news',
-      image:
-        'https://images.pexels.com/photos/4527900/pexels-photo-4527900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    },
-  ],
+ 
   posts: [
     {
       title: 'This is a title',
@@ -130,7 +104,7 @@ export default function Home({ projects }) {
           <div className="grid grid-cols-12 ">
             <div className="col-span-12 md:col-span-8">
               {projects.map((project, index) => {
-                return <Card3 imageUrl={urlFor(project.mainImage).url()} />;
+                return <Card3 key={index} imageUrl={urlFor(project.mainImage).url()} />;
               })}
             </div>
             <div className="col-span-12 md:col-span-4">
