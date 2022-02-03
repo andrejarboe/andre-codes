@@ -52,9 +52,6 @@ export default {
       title: 'Tags',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'tags' } }],
-      options: {
-        layout: 'tags',
-      },
     },
     {
       name: 'notes',

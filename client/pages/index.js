@@ -4,6 +4,7 @@ import Portfolio from '../components/Portfolio/Portfolio';
 import { sanityClient, urlFor } from '../lib/sanity';
 import Card3 from '../components/Cards/Card3';
 import Tags from '../components/Tags/Tags';
+import TagsList from '../components/Tags/TagsList';
 
 const projectsQuery = `*[ _type == 'projects']{
   _id,
@@ -11,7 +12,9 @@ const projectsQuery = `*[ _type == 'projects']{
   slug,
   mainImage,
   description,
-  tags
+  tags[] -> {
+      title
+   }
 }`;
 
 const data = {
@@ -103,6 +106,13 @@ const data = {
 
 export default function Home({ projects }) {
   const { sections, posts } = data;
+  console.log('**********************');
+  console.log('projects.tags: ');
+  console.log('**********************');
+  // projects.title.map((title) => {
+  //     return title;
+  // });
+  console.log('**********************');
 
   return (
     <div>
@@ -124,7 +134,8 @@ export default function Home({ projects }) {
               })}
             </div>
             <div className="col-span-12 md:col-span-4">
-              <Tags />
+              {/* <Tags /> */}
+              <TagsList projects={projects} />
             </div>
           </div>
         </div>
@@ -134,6 +145,7 @@ export default function Home({ projects }) {
 }
 
 export async function getStaticProps() {
+
   const projects = await sanityClient.fetch(projectsQuery);
   return { props: { projects } };
 }
