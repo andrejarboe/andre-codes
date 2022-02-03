@@ -14,7 +14,7 @@ export default function Card2() {
           <a href="#_">Consoles We Could Have Done Without</a>
         </h2>
         <p className="text-sm text-white opacity-50">
-          It's no doubt that in an industry of so much competition, there are
+          Its no doubt that in an industry of so much competition, there are
           going to be some failures. Here are the top failed consoles.
         </p>
         <span className="relative flex mt-3 text-xs text-white opacity-90">
