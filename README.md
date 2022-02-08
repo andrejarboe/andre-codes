@@ -1,6 +1,7 @@
 #
 
 ## Starting form scratch
+ git rm -r --cached node_modules  
 .gitignore  
 **/node_modules  
 mkdir websiteName  

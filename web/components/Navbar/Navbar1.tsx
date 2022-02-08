@@ -30,7 +30,7 @@ export default function Navbar1(
   console.log('company: ' + company)
   console.log('siteM ' + company)
   return (
-    <nav className="text-gray-600 shadow-lg">
+    <nav className="text-gray-600 shadow-lg border-b border-gray-700">
       <div className="mx-auto flex max-w-7xl flex-col justify-between px-4 py-4 md:flex-row md:py-6">
         {/* left header  */}
         <div
@@ -64,8 +64,11 @@ export default function Navbar1(
           {siteMap.map((link, index, siteMap) => {
             if (index === siteMap.length - 1) {
               return (
-                <div className="w-full border-t pt-6 pb-4 md:border-t-0 md:p-0">
-                  <Link key={index} href={link.href}>
+                <div
+                  key={index}
+                  className="w-full border-t pt-6 pb-4 md:border-t-0 md:p-0"
+                >
+                  <Link href={link.href}>
                     <a className="rounded bg-red-300 p-3 text-red-700 shadow transition duration-500 hover:bg-red-200 hover:text-red-600 hover:shadow-xl">
                       {link.name}
                     </a>
