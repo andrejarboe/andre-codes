@@ -3,7 +3,7 @@ import Card1 from '../components/Cards/Card1'
 import Categories1 from '../components/Categories/Categories1'
 import Experience1 from '../components/Experience/Experience1'
 import Hero2 from '../components/Hero/Hero2'
-import MainLayout1 from '../components/Layouts/MainLayout'
+import MainLayout from '../components/Layouts/MainLayout'
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MainLayout1>
+      <MainLayout>
         <Hero2 />
         <section>
           <div className="mx-auto max-w-7xl">
@@ -36,7 +36,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </MainLayout1>
+      </MainLayout>
     </div>
   )
 }
