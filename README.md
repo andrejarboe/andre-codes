@@ -1,3 +1,19 @@
+#
+
+## Starting form scratch
+.gitignore  
+**/node_modules  
+mkdir websiteName  
+
+
+
+cd webSiteName  
+sanity init --coupon sonny2022  
+
+npx create-next-app --example with-tailwindcss web  
+
+sanity init --coupon sonny2022  
+
 ## todo
 
 
