@@ -28,14 +28,18 @@ export default function Hero1() {
     //     </div>
     //   </div>
     // </section>
-    <section>
-      <div className="">
-        <h1 className='text-6xl max-w-xl'>Hello, I'm Andre Jarboe</h1>
-        <h2>
+    <section className="flex items-center justify-between border-y border-black py-10 lg:py-5">
+      <div className="space-y-5 px-4">
+        <h1 className="max-w-xl text-6xl">Hello, I'm Andre Jarboe</h1>
+        <h2 className='text-xl'>
           I'm a software engineer based in the beautiful city of Austin, TX.
         </h2>
       </div>
-      <img src="" alt="" />
+      <img
+        className="hidden h-32 space-y-5 px-4 md:inline-flex lg:h-96"
+        src="/images/pattern.png"
+        alt="abstract pattern"
+      />
     </section>
   )
 }
