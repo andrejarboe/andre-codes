@@ -36,7 +36,7 @@ export default function Hero1() {
         </h2>
       </div>
       <img
-        className="hidden h-32 space-y-5 px-4 md:inline-flex lg:h-96"
+        className="hidden space-y-5 h-60 px-4 md:inline-flex lg:h-96"
         src="/images/pattern.png"
         alt="abstract pattern"
       />
