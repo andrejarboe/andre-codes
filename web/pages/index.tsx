@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Card1 from '../components/Cards/Card1'
 import Categories1 from '../components/Categories/Categories1'
-import Experience1 from '../components/Experience/Experience1'
-import Hero2 from '../components/Hero/Hero2'
+import Hero1 from '../components/Hero/Hero1'
+
 import MainLayout from '../components/Layouts/MainLayout'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <MainLayout>
-        <Hero2 />
+        <Hero1 />
         <section>
           <div className="mx-auto max-w-7xl">
             <h1 className="font-header text-center text-4xl font-semibold uppercase text-red-400 sm:text-5xl lg:text-6xl">

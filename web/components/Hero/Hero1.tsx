@@ -2,40 +2,40 @@ import React from 'react'
 
 export default function Hero1() {
   return (
-    <section className="relative w-full overflow-hidden bg-gray-900">
- 
-      <div className="relative mx-auto max-w-7xl px-8 pt-10">
-        <div className="absolute top-0 right-0 -ml-32 hidden h-full w-full translate-x-1/2 translate-y-20 -rotate-12 scale-100 transform bg-gray-800 opacity-90 md:block" />
-        <div className="flex w-full flex-col items-center justify-between md:flex-row">
-          <div className="-mt-10 flex w-full flex-col items-start justify-center pt-10 pb-10 md:w-1/2 md:pb-24 md:pr-16">
-          
-            <h1 className="bg-gradient-to-r from-gray-200 via-gray-50 to-gray-400 bg-clip-text text-6xl font-extrabold text-transparent">
-              Your Journey <br />
-              Starts Here
-            </h1>
-            <p className="my-7 text-lg text-gray-400">
-              The story about your amazing application starts right here.{' '}
-              <br className="hidden xl:block" />
-              Believe in the story that you want to see unfold.
-            </p>
-            <a
-              href="#_"
-              className="w-full rounded-lg bg-gray-100 px-5 py-2 text-center text-lg font-normal text-gray-800 md:w-auto"
-            >
-              Get Started Now!
-            </a>
-          </div>
-          <div className="relative flex w-full items-center justify-center md:w-1/2 md:pt-0 h-96">
-            <div className="absolute w-full p-12 opacity-100">
-              <img src="https://cdn.devdojo.com/images/august2021/background-patterns.png" />
-            </div>
-            {/* <img
-              src="https://cdn.devdojo.com/images/august2021/person.png"
-              className="relative h-auto h-full w-full max-w-sm md:w-96"
-            /> */}
-          </div>
-        </div>
+    // <section className="relative w-full bg-white">
+    //   {/* <div className="max-w-7xl mx-auto">
+    //       <h1>Hello, I'm Andre Jarboe</h1>
+    //         <p>I'm a software engineer based in the beautiful city of Austin, TX.</p>
+    //   </div> */}
+    //   <div className="mx-auto flex max-w-2xl flex-col items-center px-4 py-10 sm:py-20 lg:max-w-7xl lg:flex-row xl:px-8">
+    //     <div className="w-full lg:w-1/2">
+    //       <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+    //         Hello, I'm Andre Jarboe
+    //       </h1>
+    //       <p className="mt-8 text-xl text-gray-500">
+    //         I'm a software engineer based in the beautiful city of Austin, TX.
+    //       </p>
+    //       <a
+    //         href="#_"
+    //         className="mt-8 inline-block w-full rounded-full bg-gray-900 px-8 py-4 text-center text-lg font-medium text-white sm:w-auto cursor-pointer capitalize"
+    //       >
+    //         View my work
+    //       </a>
+
+    //     </div>
+    //     <div className="mt-20 w-full sm:w-3/4 lg:mt-0 lg:w-1/2 ">
+    //       {/* <img className='max-h-96 mx-auto md:float-right' src="https://cdn.devdojo.com/images/january2022/heronew.png" /> */}
+    //     </div>
+    //   </div>
+    // </section>
+    <section>
+      <div className="">
+        <h1 className='text-6xl max-w-xl'>Hello, I'm Andre Jarboe</h1>
+        <h2>
+          I'm a software engineer based in the beautiful city of Austin, TX.
+        </h2>
       </div>
+      <img src="" alt="" />
     </section>
   )
 }
