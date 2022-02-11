@@ -1,12 +1,12 @@
 import { sanityClient, urlFor } from '../lib/sanity'
 import { Post } from '../lib/typings'
+import moment from 'moment'
 
 import Head from 'next/head'
 import Card1 from '../components/Cards/Card1'
 import Categories1 from '../components/Categories/Categories1'
 import Hero1 from '../components/Hero/Hero1'
 import MainLayout from '../components/Layouts/MainLayout'
-import Link from 'next/link'
 
 interface Props {
   posts: [Post]
@@ -40,6 +40,7 @@ export default function Home({ posts }: Props) {
                       title={project.title}
                       imageUrl={urlFor(project.mainImage).url()!}
                       author={project.author.name}
+                      date={moment(project.publishedAt).format('MMMM Do, YYYY')}
                     />
                   )
                 })}
@@ -63,6 +64,7 @@ export const getServerSideProps = async () => {
     title,
     slug,
     mainImage,
+    publishedAt,
     author-> {
       name,
       image
@@ -73,8 +75,13 @@ export const getServerSideProps = async () => {
   }`
 
   const posts = await sanityClient.fetch(query)
+  // const formatDate = (publishedAt: string) => {
+  //   return moment(publishedAt).format('MMMM Do, YYYY')
+  // }
 
-  // hav eto define post in typescript
+  
+
+  // have to define post in typescript
   return {
     props: {
       posts,
