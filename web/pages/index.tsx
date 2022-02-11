@@ -1,18 +1,19 @@
 import { sanityClient, urlFor } from '../lib/sanity'
 import { Post } from '../lib/typings'
 
-
 import Head from 'next/head'
 import Card1 from '../components/Cards/Card1'
 import Categories1 from '../components/Categories/Categories1'
 import Hero1 from '../components/Hero/Hero1'
 import MainLayout from '../components/Layouts/MainLayout'
+import Link from 'next/link'
 
 interface Props {
   posts: [Post]
 }
 
-export default function Home() {
+export default function Home({ posts }: Props) {
+  console.log(posts)
   return (
     <div className="">
       <Head>
@@ -27,13 +28,21 @@ export default function Home() {
             <h1 className="font-header text-center text-4xl font-semibold uppercase text-red-400 sm:text-5xl lg:text-6xl">
               Check out my Portfolio
             </h1>
-            <div className="grid grid-cols-12 ">
+            <div className="grid grid-cols-12 px-4 ">
               <div className="col-span-12 md:col-span-8">
-                {/* {projects.map((project, index) => { */}
-                {/* return ( */}
-                <Card1 />
-                {/* ) */}
-                {/* })} */}
+                {posts.map((project, index) => {
+                  console.log(project.slug.current)
+
+                  return (
+                    <Card1
+                      key={project._id}
+                      href={`/projects/${project.slug.current}`}
+                      title={project.title}
+                      imageUrl={urlFor(project.mainImage).url()!}
+                      author={project.author.name}
+                    />
+                  )
+                })}
               </div>
               <div className="col-span-12 md:col-span-4">
                 {/* <Tags /> */}
@@ -53,6 +62,11 @@ export const getServerSideProps = async () => {
     _id,
     title,
     slug,
+    mainImage,
+    author-> {
+      name,
+      image
+    },
     categories[]->{
       title
     }
@@ -61,9 +75,9 @@ export const getServerSideProps = async () => {
   const posts = await sanityClient.fetch(query)
 
   // hav eto define post in typescript
-    return {
-      props: {
-        posts,
-      },
-    }
+  return {
+    props: {
+      posts,
+    },
+  }
 }
