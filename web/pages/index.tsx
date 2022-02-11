@@ -1,9 +1,16 @@
+import { sanityClient, urlFor } from '../lib/sanity'
+import { Post } from '../lib/typings'
+
+
 import Head from 'next/head'
 import Card1 from '../components/Cards/Card1'
 import Categories1 from '../components/Categories/Categories1'
 import Hero1 from '../components/Hero/Hero1'
-
 import MainLayout from '../components/Layouts/MainLayout'
+
+interface Props {
+  posts: [Post]
+}
 
 export default function Home() {
   return (
@@ -39,4 +46,24 @@ export default function Home() {
       </MainLayout>
     </div>
   )
+}
+
+export const getServerSideProps = async () => {
+  const query = `*[_type == 'post']{
+    _id,
+    title,
+    slug,
+    categories[]->{
+      title
+    }
+  }`
+
+  const posts = await sanityClient.fetch(query)
+
+  // hav eto define post in typescript
+    return {
+      props: {
+        posts,
+      },
+    }
 }
