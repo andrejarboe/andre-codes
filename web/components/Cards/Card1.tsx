@@ -24,7 +24,7 @@ export default function Card1({
               alt={imageAlt}
               layout="fill" // required
               objectFit="cover" // change to suit your needs
-              className="object-top group-hover:scale-105" // just an example
+              className="object-top transition-transform duration-200 ease-in-out group-hover:scale-105 " // just an example
             />
           </div>
         </div>
