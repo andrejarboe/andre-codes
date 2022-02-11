@@ -28,7 +28,7 @@ export default function Hero1() {
     //     </div>
     //   </div>
     // </section>
-    <section className="border-black border-y">
+    <section className="border-black border-b">
       <div className="mx-auto flex max-w-7xl px-4 items-center justify-between py-10 lg:py-5">
         <div className="w-full space-y-5 px-4 md:px-0">
           <h1 className="max-w-2xl text-6xl">Hello, I'm Andre Jarboe</h1>
