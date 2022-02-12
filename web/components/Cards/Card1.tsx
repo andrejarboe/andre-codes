@@ -21,8 +21,7 @@ export default function Card1({
         <div className="h-60 md:h-auto md:w-2/5">
           <div className="relative h-60">
             <Image
-              // src={imageUrl}
-              src={urlFor(imageUrl).quality(75).url()!}
+              src={imageUrl}
               alt={imageAlt}
               layout="fill" // required
               objectFit="cover" // change to suit your needs
