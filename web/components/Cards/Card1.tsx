@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { urlFor } from '../../lib/sanity'
 
 export default function Card1({
   imageUrl = 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-546819.jpg&fm=jpg',
@@ -20,7 +21,8 @@ export default function Card1({
         <div className="h-60 md:h-auto md:w-2/5">
           <div className="relative h-60">
             <Image
-              src={imageUrl}
+              // src={imageUrl}
+              src={urlFor(imageUrl).quality(75).url()!}
               alt={imageAlt}
               layout="fill" // required
               objectFit="cover" // change to suit your needs

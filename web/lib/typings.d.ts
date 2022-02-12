@@ -7,6 +7,7 @@ export interface Post {
     image: string
   }
   publishedAt: string
+  imageUrl: string
   comments: Comment[]
   description: string
   mainImage: {

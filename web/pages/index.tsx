@@ -38,7 +38,7 @@ export default function Home({ posts }: Props) {
                       key={project._id}
                       href={`/projects/${project.slug.current}`}
                       title={project.title}
-                      imageUrl={urlFor(project.mainImage).url()!}
+                      imageUrl={project.mainImage}
                       author={project.author.name}
                       date={moment(project.publishedAt).format('MMMM Do, YYYY')}
                     />
